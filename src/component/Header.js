@@ -2,13 +2,13 @@ import React,{Component} from 'react';
 class Header extends Component{
   render(){
     let styles = {
-       backgroundColor:'#f0ffff',
+       backgroundColor:'#00bcd4',
        width:'100%',
        height:'400px'
     }
     return(
      <div style={styles}>
-        <p>Header</p>
+        Header
      </div>
     )
   }

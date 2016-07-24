@@ -3,9 +3,14 @@ import React,{Component} from 'react';
 
 class Footer extends Component{
   render(){
+    let styles = {
+      backgroundColor:'#212121',
+
+      height:'200px'
+    }
     return(
-     <div>
-       <p>Footer</p>
+     <div style={styles}>
+       Footer
       </div>
     )
   }

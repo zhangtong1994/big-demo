@@ -5,7 +5,7 @@ class List extends Component{
   render(){
     return(
        <div>
-          <p>List</p>
+          List
        </div>
     )
   }
