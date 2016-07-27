@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CardList extends Component {
+class Blogcard extends Component {
 
   render(){
     let styles={
@@ -8,7 +8,8 @@ class CardList extends Component {
         width:'80%',
         height:'100px',
         marginTop:'10px',
-        boxShawdow:'0px 2px 5px 0px #ddd'
+        
+        margin:'0 auto'
      },
      left:{
        width:'20%',
@@ -45,14 +46,14 @@ class CardList extends Component {
       )
     }
   }
-  CardList.propTypes = {
+  Blogcard.propTypes = {
     title:React.PropTypes.string.isRequired,
-    index:React.PropTypes.number.isRequired,
+    index:React.PropTypes.string.isRequired,
     date:React.PropTypes.string.isRequired,
   }
-  CardList.defaultProps = {
+  Blogcard.defaultProps = {
     title:"请输入标题",
     index:1,
     date:'2016.3.24',
   };
-  export default CardList;
+  export default Blogcard;
