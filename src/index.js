@@ -11,6 +11,15 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 class App extends Component{
+  constructor(){
+    super();
+    this.state={
+      search:''
+    }
+  }
+  cardSearch(x){
+    this.setState({search:x})
+  }
   getChildContext() {
     return {muiTheme: getMuiTheme()};
   }
@@ -18,8 +27,8 @@ class App extends Component{
 
     return(
         <div>
-           <Header />
-           <List />
+           <Header change={this.cardSearch.bind(this)} />
+           <List search={this.state.search} />
            <Footer />
         </div>
        )

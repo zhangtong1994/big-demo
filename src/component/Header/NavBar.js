@@ -35,7 +35,7 @@ class NavBar extends React.Component {
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}
         >
-          
+
           <div style={styles.menu}>
             <MenuItem onTouchTap={this.handleClose.bind(this)}>笔记列表</MenuItem>
             <MenuItem onTouchTap={this.handleClose.bind(this)}>登陆</MenuItem>

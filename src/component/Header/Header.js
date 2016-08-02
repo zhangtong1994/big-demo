@@ -2,6 +2,7 @@ import React from 'react';
 import IconButton from 'material-ui/IconButton';
 import MenuButton from 'material-ui/svg-icons/navigation/menu';
 import NavBar from './NavBar';
+import Search from './Search';
 
 
 class Header extends React.Component {
@@ -29,7 +30,7 @@ class Header extends React.Component {
         <IconButton tooltip="menu" style={styles.icon} iconStyle={styles.svg} onClick={this.handelOpen.bind(this)}>
           <MenuButton  color='#fff' hoverColor='#004D40'/>
         </IconButton>
-
+        <Search handelSearch={this.props.change}/>
         <NavBar ref='navbar'/>
       </div>
     )
