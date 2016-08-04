@@ -8,8 +8,8 @@ class Blogcard extends Component {
         width:'80%',
         height:'100px',
         marginTop:'10px',
-        
-        margin:'0 auto'
+        boxShadow:'5px 5px 5px #888888',
+        margin:'20px auto'
      },
      left:{
        width:'20%',
@@ -18,7 +18,8 @@ class Blogcard extends Component {
        color:'#fff',
        textAlign:'center',
        float:'left',
-       backgroundColor:'teal'
+       backgroundColor:'teal',
+       maxWidth:'130px'
      },
      right:{
 
