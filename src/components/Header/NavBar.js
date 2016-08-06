@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-
+import { Link } from 'react-router';
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -37,9 +37,15 @@ class NavBar extends React.Component {
         >
 
           <div style={styles.menu}>
-            <MenuItem onTouchTap={this.handleClose.bind(this)}>笔记列表</MenuItem>
-            <MenuItem onTouchTap={this.handleClose.bind(this)}>登陆</MenuItem>
-            <MenuItem onTouchTap={this.handleClose.bind(this)}>注册</MenuItem>
+            <MenuItem onTouchTap={this.handleClose.bind(this)}>
+                <Link to="/">首页</Link>
+            </MenuItem>
+            <MenuItem onTouchTap={this.handleClose.bind(this)}>
+                <Link to="blog" style={styles.link} activeStyle={{color: '#E91E63'}}>博客</Link>
+            </MenuItem>
+            <MenuItem onTouchTap={this.handleClose.bind(this)}>
+                <Link to="about" style={styles.link} activeStyle={{color: '#E91E63'}}>关于</Link>
+            </MenuItem>
           </div>
         </Drawer>
       </div>

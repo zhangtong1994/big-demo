@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import {Card} from 'material-ui/Card';
 import CircularProgress from 'material-ui/CircularProgress';
-class Home extends Component {
+class GithubAccount extends Component {
   constructor(props){
      super(props);
      this.state = {
@@ -51,4 +51,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default GithubAccount;

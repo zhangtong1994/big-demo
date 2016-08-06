@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import BlogCard from './Blogcard.js';
+import BlogCard from './BlogCard.js';
 import map from 'lodash/fp/map';
-
+import Search from './Search'
 
 let blogs=[
   {index:'1',title:'haha',date:'2014.2.26'},
@@ -9,9 +9,8 @@ let blogs=[
   {index:'3',title:'second',date:'2014.7.26'},
   {index:'4',title:'third',date:'2014.5.26'}
 ]
-class List extends Component {
+class Blog extends Component {
   render(){
-    // console.log(Cards.length);
     var blogCards = [];
     if (this.props.search=='') {
     map((b) =>  {
@@ -26,13 +25,13 @@ class List extends Component {
       }
 
   }
-    // console.log(AllCards);
     return(
       <div>
+        <Search />
         {blogCards}
       </div>
     )
   }
 }
 
-export default List;
+export default Blog;
