@@ -26,10 +26,10 @@ class Header extends React.Component {
     }
     return(
       <div style={styles.root}>
-        <IconButton tooltip="menu" style={styles.icon} iconStyle={styles.svg} onClick={this.handelOpen.bind(this)}>
+        <IconButton title="首页" tooltip="menu" style={styles.icon} iconStyle={styles.svg} onClick={this.handelOpen.bind(this)}>
           <MenuButton  color='#fff' hoverColor='#004D40'/>
         </IconButton>
-        <NavBar ref='navbar'/>
+        <NavBar ref='navbar' />
       </div>
     )
   }

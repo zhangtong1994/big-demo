@@ -50,7 +50,7 @@ class Blogcard extends Component {
   }
   Blogcard.propTypes = {
     title:React.PropTypes.string.isRequired,
-    index:React.PropTypes.string.isRequired,
+    index:React.PropTypes.number.isRequired,
     date:React.PropTypes.string.isRequired,
   }
   Blogcard.defaultProps = {

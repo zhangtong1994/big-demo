@@ -3,6 +3,7 @@ import BlogCard from './BlogCard.js';
 import map from 'lodash/fp/map';
 import Search from './Search'
 import axios from 'axios';
+import CircularProgress from 'material-ui/CircularProgress';
 // let blogs=[
 //   {index:'1',title:'haha',date:'2014.2.26'},
 //   {index:'2',title:'first',date:'2014.2.29'},
@@ -14,15 +15,19 @@ class Blog extends Component {
   constructor(){
      super();
      this.state = {
-       posts: ''
+       posts: '',
+       wait:true
 
      }
   }
   componentDidMount(){
     axios.get(`https://raw.githubusercontent.com/zhangtong1994/big-demo/master/posts/index.json?v=${Math.random()}`)
          .then((res) => {
+          console.log(res.data)
            this.setState({
-              posts:res.data
+              posts:res.data,
+              wait:false
+
 
            })
          })
@@ -32,13 +37,15 @@ class Blog extends Component {
 
     map((b) =>  {
               blogCards.push(
-                <BlogCard title={b.title} date={b.date} index={b.index} key={Math.random()}/>);},this.state.posts)
-
-
+                <BlogCard title={b.title} date={b.date} index={b.index} key={Math.random()}/>);},this.state.posts);
     return(
       <div>
-        <Search />
-        {blogCards}
+        <Search />{
+          this.state.wait ? <CircularProgress /> :
+          <div>
+           {blogCards}
+          </div>
+        }
       </div>
     )
   }
