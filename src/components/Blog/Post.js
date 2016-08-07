@@ -9,7 +9,7 @@ import marked from 'marked';
      }
    }
    componentDidMount(){
-   let address = `https://raw.githubusercontent.com/zhangtong1994/big-demo/master/posts/git-tips.md`
+   let address = `https://raw.githubusercontent.com/zhangtong1994/big-demo/master/posts/${this.props.params.title}.md`
    axios.get(address).then((res) => {
       //  console.log(res);
       //  console.log(address);

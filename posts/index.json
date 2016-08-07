@@ -1,13 +1,13 @@
 [
    {
      "index": 1,
-     "name": "hello every",
+     "name": "git-tips",
      "title": "Git Tricks I learned Today",
      "date": "2016年8月2日"
    },
    {
      "index": 2,
-     "name": "is old",
+     "name": "nodejs-basics",
      "title": "Install Nodejs and More",
      "date": "2016年8月3日"
    },
