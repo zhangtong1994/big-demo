@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-
+import {Router,hashHistory} from 'react-router';
 
 class Blogcard extends Component {
-
+   handleClick(){
+      hashHistory.push(`blog/${this.props.url}`)
+   }
   render(){
     let styles={
       root:{
@@ -38,7 +40,7 @@ class Blogcard extends Component {
      }
     }
     return (
-      <div style={styles.root}>
+      <div style={styles.root} onClick={this.handleClick.bind(this)}>
          <div style={styles.left}>{this.props.index}</div>
          <div style={styles.right}>
             <h3>{this.props.title}</h3>

@@ -37,7 +37,7 @@ class Blog extends Component {
 
     map((b) =>  {
               blogCards.push(
-                <BlogCard title={b.title} date={b.date} index={b.index} key={Math.random()}/>);},this.state.posts);
+                <BlogCard title={b.title} date={b.date} url={b.name} index={b.index} key={Math.random()}/>);},this.state.posts);
     return(
       <div>
         <Search />{
