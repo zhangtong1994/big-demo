@@ -3,9 +3,10 @@ import {Router,hashHistory} from 'react-router';
 
 class Blogcard extends Component {
    handleClick(){
-      hashHistory.push(`blog/${this.props.url}`)
+      this.context.router.push(`blog/${this.props.url}`)
    }
   render(){
+    console.log(this.context.router)
     let styles={
       root:{
         width:'80%',
@@ -60,4 +61,7 @@ class Blogcard extends Component {
     index:1,
     date:'2016.3.24',
   };
+  Blogcard.contextTypes = {
+    router:React.PropTypes.object.isRequired
+  }
   export default Blogcard;
