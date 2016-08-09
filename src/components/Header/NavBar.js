@@ -18,19 +18,19 @@ class NavBar extends React.Component {
     this.setState({open: false})
 
   }
-  componentWillReceiveProps() {
-     this.setNavState();
-   }
-   componentDidMount(){
-     this.setNavState();
-   }
-   setNavState(){
-     this.setState({
-       title:this.context.router.isActive('/', true) ? 'HOME' :
-         this.context.router.isActive('/blog')? 'BLOG' :
-         this.context.router.isActive('/about')? 'ABOUT' : 'HOME'
-     });
-   }
+  // componentWillReceiveProps() {
+  //    this.setNavState();
+  //  }
+  //  componentDidMount(){
+  //    this.setNavState();
+  //  }
+  //  setNavState(){
+  //    this.setState({
+  //      title:this.context.router.isActive('/', true) ? 'HOME' :
+  //        this.context.router.isActive('/blog')? 'BLOG' :
+  //        this.context.router.isActive('/about')? 'ABOUT' : 'HOME'
+  //    });
+  //  }
   render () {
     let styles={
       title:{
@@ -42,14 +42,22 @@ class NavBar extends React.Component {
         marginBottom:'20px'
       },
       menu:{
-        textAlign:'center'
+        textAlign:'center',
+        display:'block'
+      },
+      navTitle:{
+        color:'#fff',
+        lineHeight:'60px',
+        fontSize:'20px',
+        backgroundColor:'#00BCD4',
+        marginBottom:'10px',
+        marginTop: '0'
       }
     }
     return(
       <div>
-      <p style={styles.navTitle} onClick={this.handleClose.bind(this)}>{this.state.title}</p>
+
         <Drawer
-          title='Hello'
           docked={false}
           width={256}
           open={this.state.open}
@@ -57,6 +65,7 @@ class NavBar extends React.Component {
         >
 
           <div style={styles.menu}>
+           <p style={styles.navTitle} onClick={this.handleClose.bind(this)}>hello</p>
             <MenuItem onTouchTap={this.handleClose.bind(this)}>
                 <Link to="/">首页</Link>
             </MenuItem>

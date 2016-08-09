@@ -34,10 +34,19 @@ class Blog extends Component {
   }
   render(){
     var blogCards = [];
-
+    // if (this.props.search=='') {
     map((b) =>  {
               blogCards.push(
                 <BlogCard title={b.title} date={b.date} url={b.name} index={b.index} key={Math.random()}/>);},this.state.posts);
+            //   }else{
+            //     let query=new RegExp(this.props.search,"i");
+            //     for (var i = 0; i < blogs.length; i++) {
+            //       if (query.test(blogs[i].title)) {
+            //     blogCards.push(
+            //       <BlogCard title={blogs[i].title} date={blogs[i].date} index={blogs[i].index} key={Math.random()}/>)
+            //   }
+            // }
+          // }
     return(
       <div>
         <Search />{

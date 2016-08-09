@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import marked from 'marked';
+import hljs from 'highlight.js';
  class Post extends Component {
    constructor(){
      super();
@@ -19,7 +20,11 @@ import marked from 'marked';
      });
    }
    render(){
-
+     marked.setOptions({
+       highlight: function (code) {
+         return hljs.highlightAuto(code).value;
+       }
+     });
      let content = marked(this.state.rawContent!='' ? this.state.rawContent : '请稍等......' );
      return(
        <div>

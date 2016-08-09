@@ -22,8 +22,8 @@ class Blogcard extends Component {
        color:'#fff',
        textAlign:'center',
        float:'left',
-       backgroundColor:'teal',
-       maxWidth:'130px'
+       backgroundColor:'#00BCD4',
+       maxWidth:'100px'
      },
      right:{
 
