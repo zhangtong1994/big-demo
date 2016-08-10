@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html {
   font-family: sans-serif;
   background-color: #fafafa;
@@ -54,4 +59,27 @@ li {
 }
 ul li:first-child {
   border-left: none;
+}
+  .work-container{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.work-card{
+  width: 100%;
+  margin-bottom: 10px;
+}
+@media(min-width:500px){
+  .work-card{
+    width: 49%;
+  }
+}
+@media(min-width:760px){
+  .work-card{
+    width: 32%;
+  }
 }
