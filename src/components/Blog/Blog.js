@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BlogCard from './BlogCard.js';
+import BlogList from './BlogList.js';
 import map from 'lodash/fp/map';
 import Search from './Search'
 import axios from 'axios';
@@ -12,49 +12,23 @@ import CircularProgress from 'material-ui/CircularProgress';
 // ]
 //https://raw.githubusercontent.com/zhangtong1994/big-demo/master/posts/index.json
 class Blog extends Component {
-  constructor(){
-     super();
-     this.state = {
-       posts: '',
-       wait:true
+        constructor(){
+          super();
+          this.state={
+            search:''
+          }
+        }
+        cardSearch(x){
+          this.setState({search:x})
+        }
 
-     }
-  }
-  componentDidMount(){
-    axios.get(`https://raw.githubusercontent.com/zhangtong1994/big-demo/master/posts/index.json?v=${Math.random()}`)
-         .then((res) => {
-          console.log(res.data)
-           this.setState({
-              posts:res.data,
-              wait:false
-
-
-           })
-         })
-  }
   render(){
-    var blogCards = [];
-    // if (this.props.search=='') {
-    map((b) =>  {
-              blogCards.push(
-                <BlogCard title={b.title} date={b.date} url={b.name} index={b.index} key={Math.random()}/>);},this.state.posts);
-            //   }else{
-            //     let query=new RegExp(this.props.search,"i");
-            //     for (var i = 0; i < blogs.length; i++) {
-            //       if (query.test(blogs[i].title)) {
-            //     blogCards.push(
-            //       <BlogCard title={blogs[i].title} date={blogs[i].date} index={blogs[i].index} key={Math.random()}/>)
-            //   }
-            // }
-          // }
+
     return(
       <div>
-        <Search />{
-          this.state.wait ? <CircularProgress /> :
-          <div>
-           {blogCards}
-          </div>
-        }
+        <Search handelSearch={this.cardSearch.bind(this)} />
+        <BlogList search={this.state.search} />
+
       </div>
     )
   }

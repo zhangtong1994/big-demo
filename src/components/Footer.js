@@ -20,10 +20,8 @@ class Footer extends Component{
   }
     return(
      <div style={styles.root}>
-
              <p style={styles.p}>欢迎添加我的微信:zhangairen23</p>
              <img style={styles.img} src="http://obo85nywl.bkt.clouddn.com/images/wechat.jpg" />
-
     </div>
     )
   }

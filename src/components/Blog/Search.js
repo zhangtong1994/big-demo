@@ -7,7 +7,7 @@ class Search extends React.Component {
     this.props.handelSearch(x);
   }
   render () {
-    // console.log(this.props.handelSearch);
+    console.log(this.props.handelSearch);
     let styles={
       root:{
         padding:'50px 10px',
