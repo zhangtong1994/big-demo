@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-
+import Works from './works'
 class Home extends React.Component {
   render () {
     let styles={
@@ -31,6 +31,7 @@ class Home extends React.Component {
             <h1 style={styles.title}>欢迎光临<br/><span style={styles.span}>Helo everyone</span></h1>
           </div>
         </div>
+       <Works />
       </div>
     )
   }

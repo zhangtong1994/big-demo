@@ -52,6 +52,19 @@ class NavBar extends React.Component {
         backgroundColor:'#00BCD4',
         marginBottom:'10px',
         marginTop: '0'
+      },
+      link:{
+        textDecoration:'none',
+        display:'block',
+        color:'#333'
+      },
+      navTitle:{
+        color:'#fff',
+        lineHeight:'75px',
+        fontSize:'20px',
+        backgroundColor:'#00BCD4',
+        marginBottom:'10px',
+        marginTop: '0'
       }
     }
     return(
@@ -67,7 +80,7 @@ class NavBar extends React.Component {
           <div style={styles.menu}>
            <p style={styles.navTitle} onClick={this.handleClose.bind(this)}>hello</p>
             <MenuItem onTouchTap={this.handleClose.bind(this)}>
-                <Link to="/">首页</Link>
+                <Link to="/" style={styles.link}>首页</Link>
             </MenuItem>
             <MenuItem onTouchTap={this.handleClose.bind(this)}>
                 <Link to="blog" style={styles.link} activeStyle={{color: '#E91E63'}}>博客</Link>

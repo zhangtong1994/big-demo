@@ -55,7 +55,7 @@ for (var i = 0; i < 100; i++) {
 
    render(){
      return(
-       <div id="main" style={{width:'500px',height:'400px'}}></div>
+       <div id="main" style={{width:'500px',height:'400px',margin:'0 auto'}}></div>
      )
    }
 }

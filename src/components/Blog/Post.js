@@ -28,7 +28,6 @@ import hljs from 'highlight.js';
      let content = marked(this.state.rawContent!='' ? this.state.rawContent : '请稍等......' );
      return(
        <div>
-         { this.props.params.title }
          <div className="post-content">
            <span dangerouslySetInnerHTML={{__html: content}} />
          </div>

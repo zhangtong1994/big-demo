@@ -4,6 +4,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import './stylesheet/common.css';
 import routes from './routes.js';
 import './stylesheet/hljs.css';
+import './stylesheet/post.css';
 import {Router,hashHistory} from 'react-router';
 injectTapEventPlugin();
 ReactDOM.render(<Router routes={routes} history={hashHistory} />
